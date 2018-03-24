@@ -1,54 +1,5 @@
 <!DOCTYPE html>
 <html>
-/* The grid: Four equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-    opacity: 0.8; 
-    cursor: pointer; 
-}
-
-.column img:hover {
-    opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* The expanding image container (positioning is needed to position the close button and the text) */
-.container {
-    position: relative;
-    display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
-    font-size: 20px;
-}
-
-/* Closable button inside the image */
-.closebtn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-}
-
 <head>
 <meta charset="utf-8" />
 <title>Portifólio GamerCleanVic</title>
@@ -65,38 +16,74 @@
 <!-- <p><a href="https://github.com/GamerCleanVic/iconswpsofdistros/blob/master/Arch%20Linux/ArchRedBlue.png" target="_blank" align="justify"><img src="https://raw.githubusercontent.com/GamerCleanVic/iconswpsofdistros/gh-pages/Imagens/ArchRedBlue720x405.png" alt="Papel de parede ArchRedBlue3840x2160" height="360" width="720" align=left /></a></p><br clear="all"/><br clear="all"/> -->
 
 <!-- Galeria de Imagens -->
-<!-- The grid: four columns -->
-<div class="row">
-  <div class="column">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CARDAPIO.png" alt="Nature" onclick="openImg(this);">
-  </div>
-  <div class="column">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_lado.png" alt="Fjords" onclick="openImg(this);">
-  </div>
-  <div class="column">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_rente.png" alt="Mountains" onclick="openImg(this);">
-  </div>
-  <div class="column">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FotoPerfilLink.jpeg" alt="Lights" onclick="openImg(this);">
-  </div>
-<div class="column">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/LP_LogoCanal.png" alt="Lights" onclick="openImg(this);">
-  </div>
-<div class="column">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/TstDraw1.png" alt="Lights" onclick="openImg(this);">
-  </div>
+
+<html>
+<head>
+<style>
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <a target="_blank" href="CARDAPIO.png">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CARDAPIO.png" alt="CARDAPIO" width="300" height="200">
+  </a>
+  <div class="desc">CARDAPIO</div>
 </div>
 
-<!-- The expanding image container -->
-<div class="container">
-  <!-- Close the image -->
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+<div class="gallery">
+  <a target="_blank" href="FeiraUFACF_lado.png">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_lado.png" alt="FeiraUFACF_lado" width="300" height="200">
+  </a>
+  <div class="desc">FeiraUFACF_lado</div>
+</div>
 
-  <!-- Expanded image -->
-  <img id="expandedImg" style="width:100%">
+<div class="gallery">
+  <a target="_blank" href="FeiraUFACF_rente.png">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_rente.png" alt="FeiraUFACF_rente" width="300" height="200">
+  </a>
+  <div class="desc">FeiraUFACF_rente</div>
+</div>
 
-  <!-- Image text -->
-  <div id="imgtext"></div>
+<div class="gallery">
+  <a target="_blank" href="FotoPerfilLink.jpeg">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FotoPerfilLink.jpeg" alt="FotoPerfilLink" width="300" height="200">
+  </a>
+  <div class="desc">FotoPerfilLink</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="LP_LogoCanal.png">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/LP_LogoCanal.png" alt="LP_LogoCanal" width="300" height="200">
+  </a>
+  <div class="desc">LP_LogoCanal</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="TstDraw1.png">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/TstDraw1.png" alt="TstDraw1" width="300" height="200">
+  </a>
+  <div class="desc">TstDraw1</div>
 </div>
 
 </body>
