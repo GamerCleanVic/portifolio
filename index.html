@@ -33,49 +33,153 @@ div.desc {
 }
 </style>
 </head>
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
 <body>
 
+<!--
 <div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CARDAPIO.png">
+  <a target="_blank" href="">
     <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CARDAPIO.png" alt="CARDAPIO" width="300" height="200">
   </a>
   <div class="desc">CARDAPIO</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_lado.png">
+  <a target="_blank" href="">
     <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_lado.png" alt="FeiraUFACF_lado" width="300" height="200">
   </a>
   <div class="desc">FeiraUFACF_lado</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_rente.png">
+  <a target="_blank" href="">
     <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_rente.png" alt="FeiraUFACF_rente" width="300" height="200">
   </a>
   <div class="desc">FeiraUFACF_rente</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FotoPerfilLink.jpeg">
+  <a target="_blank" href="">
     <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FotoPerfilLink.jpeg" alt="FotoPerfilLink" width="300" height="200">
   </a>
   <div class="desc">FotoPerfilLink</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/LP_LogoCanal.png">
+  <a target="_blank" href="">
     <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/LP_LogoCanal.png" alt="LP_LogoCanal" width="300" height="200">
   </a>
   <div class="desc">LP_LogoCanal</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/TstDraw1.png">
+  <a target="_blank" href="">
     <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/TstDraw1.png" alt="TstDraw1" width="300" height="200">
   </a>
   <div class="desc">TstDraw1</div>
 </div>
+
+-->
+
+<!-- Galeria HTML -->
+<!-- The grid: four columns -->
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CARDAPIO.png" alt="Nature" onclick="openImg(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_lado.png" alt="Fjords" onclick="openImg(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_rente.png" alt="Mountains" onclick="openImg(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FotoPerfilLink.jpeg" alt="Lights" onclick="openImg(this);">
+  </div>
+
+<div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/LP_LogoCanal.png" alt="Lights" onclick="openImg(this);">
+  </div>
+
+<div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/TstDraw1.png" alt="Lights" onclick="openImg(this);">
+  </div>
+</div>
+
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+
+
+function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
 
 </body>
 </html>
