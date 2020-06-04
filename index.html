@@ -1,140 +1,522 @@
 <!DOCTYPE html>
-<!-- Galeria blank_ -->
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
+body {
+  background-color: #333333;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+  
+.bodylight { 
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.bodylight:hover{
+    border-color:#e6b800;
+    background-color: #f1dc86;
+    color: green;
+}
+/* visited link */
+.bodylight:visited {
+  background-color: #993399;
+  color: white;
+}
+/* selected link */
+.bodylight:active {
+  background-color: #f1dc86;
+  color: #806600;
+}
+ 
+.button1 { background-color: #d55442; font-weight: bold; align: justify;/*Verde*/
+/* border: 1px solid #000; */
+color: white;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.button1:hover{
+    border-color:#e6b800;
 }
 
-div.gallery:hover {
-    border: 1px solid #777;
+.youtube { background-color: #dc2929; font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+color: white;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.youtube:hover{
+    border-color:#e6b800;
 }
 
-div.gallery img {
-    width: 100%;
-    height: auto;
+.twitch { background-color: #6441a5; font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+color: white;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.twitch:hover{
+    border-color:#e6b800;
 }
 
-div.desc {
-    padding: 15px;
-    text-align: center;
+
+.mixer { background: conic-gradient(#00ccff, blue, #00ccff, blue, #00ccff, blue, #00ccff); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+color: white;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.mixer:hover{
+    border-color:#e6b800;
+}
+
+.faceb { background-color: #4267b2; font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+color: white;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.faceb:hover{
+    border-color:#e6b800;
+}
+
+.insta { background-image: linear-gradient(to right, #e9e945, #cd6700, #cc00ff); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+target-name:new;
+target-new:tab;
+color: white;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.insta:hover{
+    border-color:#e6b800;
+}
+
+
+.picpay { background-image: linear-gradient(to right, #268c26,#43cc43, #43cc43, #43cc43, #43cc43, #268c26); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+color: white;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.picpay:hover{
+    border-color:#e6b800;
+}
+
+.twitter { background-image: linear-gradient(to right, #227cfc, #227cfc, #227cfc); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+target-name:new;
+target-new:tab;
+color: white;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.twitter:hover{
+    border-color:#e6b800;
+}
+ 
+.streamlabs { background-image: linear-gradient(to right, #1bb191, #1bb191); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+target-name:new;
+target-new:tab;
+color: #012316;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #ffffff;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.streamlabs:hover{
+    border-color:#e6b800;
+}
+ 
+.periscope { background-image: linear-gradient(to right, #1c7fa7, #ffffff); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+target-name:new;
+target-new:tab;
+color: #ff3333;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #d9d9d9;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.periscope:hover{
+    border-color:#e6b800;
+}
+ 
+.nimotv { background-image: linear-gradient(to right, #1200ff, #1200ff, #ac229f, #ac229f); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+target-name:new;
+target-new:tab;
+color: #ffff38;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.nimotv:hover{
+    border-color:#e6b800;
+}
+	
+.telegram { background-image: linear-gradient(to right, #3366ff, #003c97, #003c97, #3366ff); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+target-name:new;
+target-new:tab;
+color: white;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.telegram:hover{
+    border-color: #e6b800;
+    background-color: #3366ff;
+    color: #cccccc;
+}
+/* selected link */
+.telegram:active {
+  background-image: linear-gradient(to right, #cccccc, #cccccc); font-weight: bold;
+  color: #3366ff;
+}
+	
+.dlive { background-image: linear-gradient(to right, #ffe100, #ffe100); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+target-name:new;
+target-new:tab;
+color: #000000;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.dlive:hover{
+    border-color: #000000;
+    background-color: #000000;
+    color: #807100;
+}
+/* selected link */
+.dlive:active {
+  background-image: linear-gradient(to right, #000000, #000000); font-weight: bold;
+  color: #ffe100;
+}
+
+.discord { background-image: linear-gradient(to right, #6666b2, #6666b2); font-weight: bold; /*Verde*/
+/* border: 1px solid #000; */
+target-name:new;
+target-new:tab;
+color: white;
+font-weight: bold;
+padding: 7px 19px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0 0 3px #000000;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px rgba(0,0,0,0.5);
+margin:0 1em 0 0;
+ }
+.discord:hover{
+    border-color:#e6b800;
+}
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
 </style>
-<title>Portfolio</title>
 </head>
 <body>
-<h1 align="center" size="5"><strong>PORTFOLIO</strong></h1>
-<h2><font align="justify" size="5" font color="#585858"><strong>Este é meu portifólio de designs, fique à vontade para visualizá-lo. Para ver as imagens maiores é só clicar nelas. Muito obrigado pela visita e volte sempre.</strong></font></h2>
 
-<!-- Contatos Perfis Redes Sociais -->
-<!doctype html>
-<p align="center" size="3"><b>Perfis Na Internet</b></p>
-<p>	
-	<center>
-		<table>
-			<tr>
-				<td><text border="1" alt="Perfis e Doações aqui" width="160" height="26" ><strong></strong></text>
-				<td><a href="https://goo.gl/2Hqt7d" target="_blank"><img border="0" alt="Donate" src="https://goo.gl/Y5vRwB" width="85" height="26" />
-				<td><a href="https://goo.gl/1WPw41" target="_blank"><img border="0" alt="Soundcloud" src="https://goo.gl/CRbt4F" width="85" height="26" />
-				<td><a href="https://www.facebook.com/LinuxPovao/" target="_blank"><img border="0" alt="Facebook" src="https://goo.gl/aSufwB" width="85" height="26" />
-				<td><a href="https://goo.gl/t6B8cj" target="_blank"><img border="0" alt="Youtube" src="https://goo.gl/MO5Rxq" width="85" height="26" />
+<div style="margin-top:210px;padding:15px 15px 2500px;font-size:14px">
+<!-- BOTÃO E TEXTO NOTÍCIA -->
+<!-- #b5e3bd (Verde claro),  Roxo (#9d69d4), Salmão (#ffeed4), Lilás (#e6e6ff), Rosa (#ffdcfb), Azul claro (#E6E6FA) -->
+<h1 align="center" style="color: #d9d9d9; font-size: 450%;"><b>PORTFOLIO</b></h1>
+<br clear=all>	
+<!-- BOTÕES DOAR -->
 
-<td><a href="http://goo.gl/xVd3sm" target="_blank"><img border="0" alt="Telegram" src="https://goo.gl/gWx4El" width="85" height="26" />
+<br /><br />
+<h1 align="center" id="inicio" ><font color="#d9d9d9"><b>ESSAS SÃO NOSSAS REDES SOCIAIS, CLIQUE E INSCREVA-SE À VONTADE</b></font></h1>
+<p align="center">                       
+<table align="center">
+<tr>
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://bit.ly/2L3J2yG" class="youtube">YOUTUBE</button>
+</form><text>  </text></td>
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://twitch.tv/linuxpovao" class="twitch">TWITCH</button>
+</form><text>  </text></td>
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://mixer.com/LinuxPovaoTV" class="mixer">MIXER</button>
+</form><text>  </text></td>
+<td><!-- BOTÕES DOAR --><form target="_blank" align="justify"><button type="submit" formaction="https://facebook.com/NoticiasDicasLP" class="faceb">FACEBOOK</button>
+</form><text>  </text></td>
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://www.instagram.com/linuxpovaotv21/" class="insta">INSTAGRAM</button>
+</form></td>
+<text>  </text><td><!-- BOTÕES DOAR --><form target="_blank" align="justify"><button type="submit" formaction="https://facebook.com/groups/LinuxPovao" class="faceb">FACE GRUPO</button>
+</form><text>  </text></td>
+</tr>
+</table>
+ 
+</p>
 
-			</a></td></a></td></a></td></a></td></a></td></td></tr>
-		</table>
-	</center>
-</p> <br/>
-</!doctype>
 
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Manteiga2.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Manteiga2.png" alt="Venda de Artesanais" width="300" height="200">
-  </a>
-  <div class="desc">Venda de Artesanais</div>
+<br />
+<p align="center">                       
+<table align="center">
+<tr>
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://twitter.com/LinuxPovaoTV" class="twitter">TWITTER</button>
+</form><text>  </text></td>
+
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://www.periscope.tv/LinuxPovaoTV" class="periscope">PERISCOPE</button>
+</form><text>  </text></td>
+
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://www.nimo.tv/live/6055270366" class="nimotv">NIMO TV</button>
+</form><text>  </text></td>
+	
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://t.me/LinuxPovaoCanal" class="telegram">TELEGRAM</button>
+</form><text>  </text></td>
+	
+<td><!-- BOTÕES DOAR -->
+<form target="_blank" align="justify"><button type="submit" formaction="https://dlive.tv/LinuxPovaoTV" class="dlive">DLIVE</button>
+</form><text>  </text></td>
+
+<td><!-- BOTÕES DOAR -->
+<form target="_blank"><button type="submit" formaction="https://discord.gg/mtdnk9u" class="discord">DISCORD</button>
+</form></td>
+	
+</tr>
+</table><br><br>
+
+</p>
+
+<h2 align="justify"><font size="5" color="#d9d9d9"><b>ESTE É MEU PORTIFÓLIO DE DESIGNS, FIQUE À VONTADE! PARA VER AS IMAGENS MAIORES É SÓ CLICAR NELAS PARA VÊ-LAS NO FIM DA PÁGINA! MUITO OBRIGADO PELA VISITA E VOLTE SEMPRE</b></font></h2><br>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Manteiga2.png" alt="PRODUTOS ARTESANAIS" style="width:140px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_lado.png" alt="FEIRA DA UFAC - LADO" style="width:140px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_rente.png" alt="FEIRA DA UFAC - FRENTE" style="width:140px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FotoPerfilLink.jpeg" alt="FOTO PARA PERFIS" style="width:140px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/TstDraw1.png" alt="ORGANOGRAMA" style="width:200px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Evento.jpeg" alt="EVENTO" style="width:140px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CertificadoExemplo.jpeg" alt="CERTIFICADO" style="width:200px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Cart%C3%A3oEngenhariaC.png" alt="CARTÃO DE VISITAS - ENGENHEIRO" style="width:200px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CARDAPIO.png" alt="CARDÁPIO" style="width:140px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/BannerPropaganda.png" alt="BANNER DE FEIJOADA" style="width:200px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Apicultor.png" alt="CARTÃO DE VISITA - APICULTOR" style="width:200px" onclick="myFunction(this);">
+  </div>
 </div>
 
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_lado.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_lado.png" alt="Feira da UFAC - Lado" width="300" height="200">
-  </a>
-  <div class="desc">Feira da UFAC - Lado</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_rente.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FeiraUFACF_rente.png" alt="Feira da UFAC - Frente" width="300" height="200">
-  </a>
-  <div class="desc">Feira da UFAC - Frente</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FotoPerfilLink.jpeg">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/FotoPerfilLink.jpeg" alt="Foto para Perfis" width="300" height="200">
-  </a>
-  <div class="desc">Foto para Perfis</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/LP_LogoCanal.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/LP_LogoCanal.png" alt="Foto para perfil" width="300" height="200">
-  </a>
-  <div class="desc">Foto para perfil</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/TstDraw1.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/TstDraw1.png" alt="Organograma" width="300" height="200">
-  </a>
-  <div class="desc">Organograma</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Evento.jpeg">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Evento.jpeg" alt="Evento" width="300" height="200">
-  </a>
-  <div class="desc">Banner de Evento</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CertificadoExemplo.jpeg">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CertificadoExemplo.jpeg" alt="Certificado" width="300" height="200">
-  </a>
-  <div class="desc">Certificado</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Cart%C3%A3oEngenhariaC.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Cart%C3%A3oEngenhariaC.png" alt="Cartão de visitas - Engenheiro" width="300" height="200">
-  </a>
-  <div class="desc">Cartão de visitas - Engenheiro</div>
 </div>
 
 
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CARDAPIO.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/CARDAPIO.png" alt="Cardápio" width="300" height="200">
-  </a>
-  <div class="desc">Cardápio</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
 </div>
 
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/BannerPropaganda.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/BannerPropaganda.png" alt="Banner de feijoada" width="300" height="200">
-  </a>
-  <div class="desc">Banner de feijoada</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Apicultor.png">
-    <img src="https://raw.githubusercontent.com/GamerCleanVic/portifolio/gh-pages/Imagens/Apicultor.png" alt="Cartão de apicultor" width="300" height="200">
-  </a>
-  <div class="desc">Cartão de de visitas - apicultor</div>
-</div>
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
 
 </body>
 </html>
