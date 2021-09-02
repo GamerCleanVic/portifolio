@@ -74,19 +74,20 @@ display: block;
 color: #ccc;
 	}
 	
+body  {
+  background-image: url("Imagens/PonteVertical.png");
+  background-color: #333;
+}
 .container {
   position: relative;
-  font-family: Arial;
-}
-
-.text-block {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
+  text-align: center;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 </style>
@@ -124,16 +125,13 @@ function closeNav() {
 <br clear=all>	
 <!-- BOTÕES DOAR -->
 
-<div class="container">
-  <img src="Imagens/PonteVertical.png" alt="PORTFOLIO" style="width:100%;">
-  <div class="text-block">
-    <h4>PORTFOLIO</h4>
-    <p>ESTE É MEU PORTIFÓLIO DE DESIGNS, FIQUE À VONTADE! PARA VER AS IMAGENS MAIORES É SÓ CLICAR NELAS PARA VÊ-LAS E NO X ACIMA PARA SAIR DELA! MUITO OBRIGADO PELA VISITA E VOLTE SEMPRE!</p>
-  </div>
-</div>
+<div class="container">    
 	
+<h1>PORTFOLIO</h1>
 
+<div class="centered">ESTE É MEU PORTIFÓLIO DE DESIGNS, FIQUE À VONTADE! PARA VER AS IMAGENS MAIORES É SÓ CLICAR NELAS PARA VÊ-LAS E NO X ACIMA PARA SAIR DELA! MUITO OBRIGADO PELA VISITA E VOLTE SEMPRE!</div>
 
+</div>
 </div>
 
 <!-- The four columns -->
