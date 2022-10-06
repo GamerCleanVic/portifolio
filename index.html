@@ -70,9 +70,12 @@ display: block;
 align: justify;
 	}
 body{
-display: block;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
 color: #ccc;
-	}
+}
 	
 body  {
   background-image: url("Imagens/Onibus.jpg");
@@ -86,10 +89,7 @@ body  {
   text-align: center;
   color: white;
 }
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.centered {   
   transform: translate(-50%, -50%);
   background-color:rgba(0, 0, 0, 0.6);
   padding: 7px;
